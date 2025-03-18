@@ -70,21 +70,40 @@ class _MyHomePageState extends State<MyHomePage> {
 
   // function to display fetched data on screen
   Widget buildPosts(List<Post> posts) {
-    // ListView Builder to show data in a list
     return ListView.builder(
       itemCount: posts.length,
       itemBuilder: (context, index) {
         final post = posts[index];
         return Container(
-          color: Colors.grey.shade300,
-          margin: EdgeInsets.symmetric(vertical: 5, horizontal: 10),
-          padding: EdgeInsets.symmetric(vertical: 5, horizontal: 5),
-          height: 100,
-          width: double.maxFinite,
-          child: Row(
+          margin: EdgeInsets.symmetric(vertical: 8, horizontal: 16),
+          padding: EdgeInsets.all(16),
+          decoration: BoxDecoration(
+            color: Colors.white,
+            borderRadius: BorderRadius.circular(12),
+            boxShadow: [
+              BoxShadow(
+                color: Colors.grey.withOpacity(0.2),
+                blurRadius: 6,
+                spreadRadius: 2,
+                offset: Offset(0, 3),
+              ),
+            ],
+          ),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              SizedBox(width: 10),
-              Expanded(flex: 3, child: Text(post.title!)),
+              Text(
+                "Title: " + post.title!,
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontSize: 18,
+                ),
+              ),
+              SizedBox(height: 8),
+              Text(
+                post.body!,
+                style: TextStyle(fontSize: 16),
+              ),
             ],
           ),
         );
