@@ -1,16 +1,38 @@
-# project_123
 
-A new Flutter project.
+# Flutter API Integration & Data Fetching Assignment
 
-## Getting Started
+## Project Overview
 
-This project is a starting point for a Flutter application.
+This Flutter application fetches and displays data from a public API, focusing on seamless API integration, data handling, and user experience. The app retrieves posts from the [JSONPlaceholder API](https://jsonplaceholder.typicode.com/posts) and displays them in a scrollable list.
 
-A few resources to get you started if this is your first Flutter project:
+## Features
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+- **API Integration**: Fetches data from `jsonplaceholder.typicode.com/posts`.
+- **ListView**: Displays the post titles in a scrollable list.
+- **Loading Indicator**: Shows a circular loading spinner while the data is being fetched.
+- **Error Handling**: Displays a user-friendly error message if the API request fails.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Setup Instructions
+
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/warxmachine/PROJECT-X.git
+   ```
+2. **Install dependencies**:
+   ```bash
+   flutter pub get
+   ```
+4. **Run the app**:
+   ```bash
+   flutter run
+   ```
+
+## Assumptions
+
+- The app only displays the post titles for simplicity.
+- Any network failure will result in a simple error message being shown to the user.
+
+## Additional Enhancements
+
+- The app handles potential failures gracefully by showing a message instead of crashing.
+- Clean and structured code with adequate comments for better understanding.
